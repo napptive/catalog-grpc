@@ -7,16 +7,19 @@ import "validate/validate.proto";
 
 // FileInfo represents all the information of an application file
 message FileInfo {
+  // Path with the path of the file
   string path = 1 [(validate.rules).string.min_len = 1];
+  // Data with the file content
   bytes data = 2;
 }
 
 // AddApplicationRequest with a request to add an application to catalog
 message AddApplicationRequest {
-  // RepoName with the name of the repository, matches with the UserName
-  string repo_name = 1 [(validate.rules).string.min_len = 1];
+  // ApplicationName with the name of the application
+  // [repoURL/]repoName/appName[:tag]
+  string application_name = 1 [(validate.rules).string.min_len = 1];
   // Files with all the application files
-FileInfo file = 4 [(validate.rules).repeated.min_items = 1];
+  FileInfo file = 4 [(validate.rules).repeated.min_items = 1];
 }
 
 message DownloadApplicationRequest {
@@ -28,8 +31,3 @@ message DownloadApplicationRequest {
   string version = 3;
 }
 
-// ApplicationBundle with the application
-message ApplicationBundle {
-  // Files with all the application files
-  repeated FileInfo files = 1;
-}
