@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: GPM
-        uses: dhiguero/gpm-github-action@v0.0.3
+        uses: gpm-project/gpm-github-action@v0.0.3
         id: gpm
         with:
           debug: 'false'
