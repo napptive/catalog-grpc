@@ -20,7 +20,7 @@ message AddApplicationRequest {
   // version with the version of the application
   string version = 3;
   // Files with all the application files
-  repeated FileInfo files = 4 [(validate.rules).repeated.min_items = 1];
+FileInfo file = 4 [(validate.rules).repeated.min_items = 1];
 }
 
 message DownloadApplicationRequest {
