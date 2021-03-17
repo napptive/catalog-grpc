@@ -1,0 +1,17 @@
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  generate_protos:
+    runs-on: ubuntu-latest
+    name: Compile new protos
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: GPM
+        uses: dhiguero/gpm-github-action@v0.0.3
+        id: gpm
+        with:
+          debug: 'false'
+          skipPublish: 'true'
+          accessToken: ${{ secrets.GPM_PAT }}
