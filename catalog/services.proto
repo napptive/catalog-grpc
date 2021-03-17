@@ -19,7 +19,7 @@ service Catalog {
     };
   }
   // Download an application from catalog
-  rpc Download(DownloadApplicationRequest) returns (stream ApplicationBundle) {
+  rpc Download(DownloadApplicationRequest) returns (stream FileInfo) {
     option (google.api.http) = {
       post: "/v0/catalog/download",
       body: "*"
