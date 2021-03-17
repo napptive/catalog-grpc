@@ -15,10 +15,6 @@ message FileInfo {
 message AddApplicationRequest {
   // RepoName with the name of the repository, matches with the UserName
   string repo_name = 1 [(validate.rules).string.min_len = 1];
-  // ApplicationName with the name of the application
-  string application_name = 2 [(validate.rules).string.min_len = 1];
-  // version with the version of the application
-  string version = 3;
   // Files with all the application files
 FileInfo file = 4 [(validate.rules).repeated.min_items = 1];
 }
