@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package playground_common;
+package catalog_common;
 option go_package = "github.com/napptive/grpc-catalog-common-go;grpc_catalog_common_go";
 
 // Empty message as required by gRPC for services not requiring any parameters.

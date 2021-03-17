@@ -12,7 +12,7 @@ import "google/api/annotations.proto";
 // Catalog related operations
 service Catalog {
   // Add a new application in the catalog
-  rpc Add (stream AddApplicationRequest) returns (common.OpResponse){
+  rpc Add (stream AddApplicationRequest) returns (catalog_common.OpResponse){
     option (google.api.http) = {
       post: "/v0/catalog/add"
       body: "*"
