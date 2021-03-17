@@ -19,7 +19,7 @@ message AddApplicationRequest {
   // [repoURL/]repoName/appName[:tag]
   string application_name = 1 [(validate.rules).string.min_len = 1];
   // Files with all the application files
-  FileInfo file = 4 [(validate.rules).repeated.min_items = 1];
+  repeated FileInfo file = 2 [(validate.rules).repeated.min_items = 1];
 }
 
 message DownloadApplicationRequest {
