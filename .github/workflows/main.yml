@@ -1,0 +1,18 @@
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  generate_protos:
+    runs-on: ubuntu-latest
+    name: Compile and push new protos
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: GPM
+        uses: gpm-project/gpm-github-action@v0.0.3
+        id: gpm
+        with:
+          debug: 'false'
+          skipPublish: 'false'
+          accessToken: ${{ secrets.GPM_PAT }}

@@ -1,0 +1,5 @@
+repositoryProvider: githubaction
+repositoryOrganization: napptive
+repositoryPusherEmail: cicd@napptive.com
+repositoryPusherUsername: hermione-napptive
+defaultLanguage: go

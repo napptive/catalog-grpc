@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package catalog_common;
+option go_package = "github.com/napptive/grpc-catalog-common-go;grpc_catalog_common_go";
+
+// Empty message as required by gRPC for services not requiring any parameters.
+message EmptyRequest{
+}
+
+// OpStatus enumeration defining the possible status of an operation.
+enum OpStatus{
+  // Unknown operation status indicates an error in the processing of the request as all operations should
+  // have a determined status.
+  UNKNOWN = 0;
+  // Success indicates that the operation was completed successfully.
+  SUCCESS = 1;
+}
+
+// OpResponse with a common definition for the result of executing an operation through gRPC. Notice that
+// in case of an error, the call must fail unless the operation is executed asynchronously and this
+// message contains the result of a past operation.
+message OpResponse{
+  // Status of the operation.
+  OpStatus status = 1;
+  // StatusName with the string representation of the status.
+  string status_name = 2;
+  // UserInfo with additional information to show to the user.
+  string user_info = 3;
+}
