@@ -15,21 +15,17 @@ message FileInfo {
 
 // AddApplicationRequest with a request to add an application to catalog
 message AddApplicationRequest {
-  // Username with the name of the user who ask for the operation
-  string username = 1 [(validate.rules).string.min_len = 1];
   // ApplicationName with the name of the application
   // [repoURL/]repoName/appName[:tag]
-  string application_name = 2 [(validate.rules).string.min_len = 1];
+  string application_name = 1 [(validate.rules).string.min_len = 1];
   // Files with all the application files
-  repeated FileInfo file = 3 [(validate.rules).repeated.min_items = 1];
+  repeated FileInfo file = 2 [(validate.rules).repeated.min_items = 1];
 }
 
 // DownloadApplicationRequest with the request to download an application
 message DownloadApplicationRequest {
-  // Username with the name of the user who ask for the operation
-  string username = 1 [(validate.rules).string.min_len = 1];
   // ApplicationName with the name of the application
   // [repoURL/]repoName/appName[:tag]
-  string application_name = 2 [(validate.rules).string.min_len = 1];
+  string application_name = 1 [(validate.rules).string.min_len = 1];
 }
 
