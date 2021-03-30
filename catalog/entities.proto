@@ -59,8 +59,8 @@ message InfoApplicationResponse {
   bytes app_conf_file = 5;
 }
 
-// ApplicationResume with a resume of an application
-message ApplicationResume {
+// ApplicationSummary with a resume of an application
+message ApplicationSummary {
   // RepositoryName with the name of the repository
   string repository_name = 1;
   // ApplicationName with the name of the application
