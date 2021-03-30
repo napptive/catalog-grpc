@@ -73,5 +73,5 @@ message ApplicationSummary {
 
 // ApplicationList with a list of application resume
 message ApplicationList {
-  repeated ApplicationResume applications = 1;
+  repeated ApplicationSummary applications = 1;
 }
