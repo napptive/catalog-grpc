@@ -54,9 +54,9 @@ message InfoApplicationResponse {
   // Tag with the tag of the application
   string tag = 3;
   // MetadataFile with the content of metadata file
-  bytes medata_file = 4;
-  // AppConfFile with the content of app_config file
-  bytes app_conf_file = 5;
+  bytes metadata_file = 4;
+  // ReadmeFile with the content of app_config file
+  bytes readme_file = 5;
 }
 
 // ApplicationSummary with a resume of an application
