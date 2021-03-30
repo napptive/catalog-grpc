@@ -33,7 +33,7 @@ service Catalog {
     };
   }
 
-  rpc List (catalog_common.EmptyResponse) returns (ApplicationList) {
+  rpc List (catalog_common.EmptyRequest) returns (ApplicationList) {
     option (google.api.http) = {
       get: "/v0/catalog/list"
     };
