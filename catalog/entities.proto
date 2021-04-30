@@ -60,7 +60,7 @@ message InfoApplicationResponse {
   // ReadmeFile with the content of app_config file
   bytes readme_file = 5;
   // Metadata with the metadata object
-  CatalogMetadata metadata = 6;
+  ApplicationMetadata metadata = 6;
 }
 
 // ApplicationSummary with a resume of an application
