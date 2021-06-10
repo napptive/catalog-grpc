@@ -48,5 +48,5 @@ service Catalog {
   }
 
   // Summary returns the catalog summary
-  rpc Summary(common.EmptyRequest) returns (SummaryResponse);
+  rpc Summary(catalog_common.EmptyRequest) returns (SummaryResponse);
 }
