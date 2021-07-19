@@ -73,6 +73,8 @@ message ApplicationSummary {
   string application_name = 2;
   // TagMetadataName associated with the catalog entry. MetadataName indexed by tag
   map<string, string> tag_metadata_name = 3;
+  // Logo of the application.
+  repeated ApplicationLogo logo = 4;
 }
 
 // ApplicationList with a subset of application summaries.
