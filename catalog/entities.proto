@@ -184,6 +184,22 @@ message DeployApplicationRequest{
   string target_environment_qualified_name = 2 [(validate.rules).string.min_len = 1];
   // TargetPlaygroundAPIURL indicating the url to which redirect the request.
   string target_playground_api_url = 3 [(validate.rules).string.min_len = 1];
-  // ApplicationName with the name which the application will be renamed
-  string applicationName = 4;
+  // ApplicationInstanceName with the name which the application will be renamed
+  string application_instance_name = 4;
+}
+
+// GetConfigurationRequest with the information required to ask for an application configuration
+message GetConfigurationRequest{
+  // ApplicationId with the identifier of an application using the
+  // same approach as docker:
+  // [catalogURL/]namespace/appName[:tag]
+  string application_id = 1 [(validate.rules).string.min_len = 1];
+}
+
+// GetConfigurationResponse with application configuration
+message GetConfigurationResponse{
+    // ApplicationDefaultName with the application instance name by default
+    string application_default_name = 1;
+    // Parameters with the application parameters (yaml format) 
+    string parameters = 2;
 }
