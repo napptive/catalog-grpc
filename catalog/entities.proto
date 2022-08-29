@@ -184,5 +184,6 @@ message DeployApplicationRequest{
   string target_environment_qualified_name = 2 [(validate.rules).string.min_len = 1];
   // TargetPlaygroundAPIURL indicating the url to which redirect the request.
   string target_playground_api_url = 3 [(validate.rules).string.min_len = 1];
-   
+  // ApplicationName with the name which the application will be renamed
+  string applicationName = 4;
 }
