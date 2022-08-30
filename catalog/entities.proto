@@ -176,8 +176,8 @@ message DeleteNamespaceRequest {
 message ApplicationInstanceConfiguration{
     // ApplicationDefaultName with the application instance name by default
     string application_default_name = 1;
-    // Parameters with the application parameters (yaml format) 
-    string parameters = 2;
+    // SpecComponentsRaw with the component specification in yaml format (parameters, traits, etc.)
+    string spec_components_raw = 2;
 }
 
 // DeployApplicationRequest with the information required to send a
@@ -208,6 +208,6 @@ message GetConfigurationRequest{
 message GetConfigurationResponse{
     // ApplicationDefaultName with the application instance name by default
     string application_default_name = 1;
-    // Parameters with the application parameters (yaml format) 
-    string parameters = 2;
+    // SpecComponentsRaw with the component specification in yaml format (parameters, traits, etc.)
+    string spec_components_raw = 2;
 }
