@@ -229,4 +229,6 @@ message UpdateRequest {
   string namespace = 1;
   // ApplicationName with the name of the application
   string application_name = 2;
+  // Private with the application visibility
+  bool private = 3;
 }
