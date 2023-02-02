@@ -94,4 +94,16 @@ service Applications{
       }
     };
   }
+
+  rpc GetConfiguration2(GetConfigurationRequest) returns (GetConfigurationResponse) {
+    option (google.api.http) = {
+      post: "/v1/catalog/app/configuration"
+      body: "*"
+      additional_bindings: {
+        post: "catalog/app/configuration"
+        body: "*"
+      }
+    };
+  }
+
 }
