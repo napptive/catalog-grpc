@@ -89,9 +89,9 @@ service Applications{
       post: "/catalog/v0/app/configuration"
       body: "*"
       additional_bindings {
-        post: "v0/catalog/v0/app/configuration"
+        post: "v0/catalog/app/configuration"
         body: "*"
       }
     };
-  } 
+  }
 }
