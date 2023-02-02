@@ -87,7 +87,7 @@ service Applications{
   rpc GetConfiguration(GetConfigurationRequest) returns (GetConfigurationResponse) {
     option (google.api.http) = {
       post: "/catalog/v0/app/configuration"
-      addional_bindings {
+      additional_bindings {
         post: "v0/catalog/v0/app/configuration"
       }
       body: "*"
