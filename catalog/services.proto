@@ -35,7 +35,7 @@ service Catalog {
   // List the applications in the catalog.
   rpc List (ListApplicationsRequest) returns (ApplicationList) {
     option (google.api.http) = {
-      post: "/v0/catalog/ist"
+      post: "/v0/catalog/list"
       body: "*"
     };
   }
